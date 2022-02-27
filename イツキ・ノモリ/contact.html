@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html#head", class="headlogo">イツキノ・モリ</a>
+        </div>
+        <div class="header-right">
+
+            <div class="nav">
+                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                <input id="drawer_input" class="drawer_hidden" type="checkbox">
+                <!-- ハンバーガーアイコン -->
+                <label for="drawer_input" class="drawer_open"><span></span></label>
+                <!-- メニュー -->
+                <nav class="nav_content">
+                  <ul class="nav_list">
+                    <h2>お品書き</h2>
+                    <li class="nav_item"><a href="index.html#profile">挨拶</a></li>
+                    <li class="nav_item"><a href="index.html#artwork">ラクガキ</a></li>
+                    <li class="nav_item"><a href="index.html#movie">映画グッズ</a></li>
+                    <li class="nav_item"><a href="index.html#tora">干支</a></li>
+                    <li class="nav_item"><a href="contact.html">お問い合わせ</a></li>                  
+                  </ul>
+                </nav>
+            </div>
+
+
+        </div>
+    </header>
+
+      <!-- contact form -->
+      <main class="main4" id="submit">
+        <h1>お問い合わせ</h1>
+        <form action="" method="post">
+            <div class="form">
+                <div class="input">
+                    <p>お名前:</p>
+                    <input class="name" type="text" name="name">
+                </div>
+                <div class="input">
+                    <p>メールアドレス:</p>
+                    <input class="email" type="text" name="email">
+                </div>
+                <div class="input">
+                    <p>本文:</p>
+                    <input class="message" type="text" name="message">
+                </div>           
+            </div>
+            <input class="submit" type="submit" value="送信">
+        </form>
+    </main>
+    <footer>
+        <div>© Itsuki Hirata, 2022</div>
+   </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.main2 {
+    position: relative;
+}
+
+.kitties1, .animalF1, .stool1, .books1 {
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.kitties1 p, .animalF1 p, .stool1 p, .books1 p {
+    /* padding-top: 20px; */
+    color: white;
+    font-size: 30px;
+    font-weight: normal;
+    /* display: none; */
+}
+
+
+.kitties1 img {
+    width: 50%;
+    padding-top: 200px;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+.animalF1 img {
+    width: 40%;
+    padding-top: 100px;
+    margin: 0 auto;
+    background-size: cover;
+
+}
+
+.stool1 img {
+    width: 50%;
+    padding-top: 150px;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+.books1 img {
+    width: 50%;
+    padding-top: 200px;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+
+
