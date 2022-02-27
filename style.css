@@ -40,7 +40,6 @@ header div {
 }
 
 
-
 /* ここから下がハンバーガーメニューに関するCSS */
   
 /* チェックボックスを非表示にする */
@@ -53,10 +52,14 @@ header div {
     display: flex;
     height: 150px;
     width: 150px;
+    padding-top: 4px;
+    right: 4px;
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 100;/* 重なり順を一番上にする */
+    border: none;
+    background:rgb(175, 138, 69);
+    z-index: 100;    /*重なり順を一番上にする*/
     cursor: pointer;
   }
   
@@ -69,7 +72,6 @@ header div {
     height: 7px;
     width: 65px;
     border-radius: 7px;
-    /* background: #333; */
     background: black;
     transition: 0.5s;
     position: absolute;
@@ -84,22 +86,12 @@ header div {
   .drawer_open span:after {
     top: 25px;
   }
-  
-  /* アイコンがクリックされたら真ん中の線を透明にする */
-  /* #drawer_input:checked ~ .drawer_open span {
-    background: rgba(255, 255, 255, 0);
+/* 
+  #hambur:active {
+      color:rgba(117, 117, 117, 0)
   } */
   
-  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-  /* #drawer_input:checked ~ .drawer_open span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-  } */
-  
-  /* #drawer_input:checked ~ .drawer_open span::after {
-    top: 0;
-    transform: rotate(-45deg);
-  } */
+
 
   /* メニューのデザイン*/
   .nav_content {
@@ -162,9 +154,98 @@ header div {
   } */
 
 
+
+@media  screen and (max-width: 540px) {
+    header {
+        height: 50px; 
+    }
+    
+    .headlogo {
+        margin-left: 10px;
+        font-size: 15px;
+    }
+  
+   .drawer_open {
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上にする */
+   }
+  
+   .drawer_open span,
+   .drawer_open span:before,
+   .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 25px;
+    border-radius: 2px;
+    /* background: #333; */
+    transition: 0.5s;
+    position: absolute;
+   }
+  
+  /* 三本線の一番上の棒の位置調整 */
+   .drawer_open span:before {
+    bottom: 8px;
+   }
+ 
+  /* 三本線の一番下の棒の位置調整 */
+   .drawer_open span:after {
+    top: 8px;
+   }
+
+  
+  /* メニューのデザイン*/
+   .nav_content {
+    width: 250px;
+    height: 150px;
+    right: 0;
+    position: fixed;
+    z-index: 99;
+    background: rgba(117, 117, 117, 0.9);
+    border: 1px solid black;
+    transition: .5s;
+    display: none;
+  }
+  
+   .nav_list {
+    top: 50px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+
+   .nav_list h2 {
+      margin-left: 15px; 
+      font-size: 20px;
+      font-weight: bold;
+   }
+
+   .nav_item {
+    margin-left: 10px;
+   }
+
+}
+
+
+
+
+
 /* main begins----------------------------------------------------------------- */
 
 .main1 {
+    width: 100%;
     background-image: url("maintop.png");
     background-size: cover;
     /* background-attachment: fixed; */
@@ -232,6 +313,39 @@ header div {
   }
 }
 
+@media screen and (max-width: 540px) {
+    .main1 {
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+    
+    .main1 div {
+        width: 320px;
+        height: 150px;
+        padding-top: 220px;
+        padding-left: 20px;
+    }
+    
+    .greeting {
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 0.2em;
+        line-height: 40px;
+        text-indent: 0em; 
+        writing-mode: inherit;
+        /* text-align: center; */
+
+    }   
+
+    .gre1 {
+       display: none;
+    }
+
+    
+}
+
 @media screen and (max-width: 780px) {
     .main1 div {
         display: flex;
@@ -240,12 +354,15 @@ header div {
     }
 
     .greeting {
-        text-align: center;
+        text-align: left;
     }
+
+  
 } 
 
 /* profile ----------------------------------------------------------------------*/
 .main2-1 { 
+    width: 100%;
     color: black;
     height: 1100px;
     background: white;
@@ -290,9 +407,69 @@ header div {
     text-align: start;
 }
 
+
+
+@media screen and (max-width: 540px) {
+    .main2-1 { 
+        width: 100%;
+        height: 1200px;
+    }
+    
+    .profile {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       margin: 0 auto;
+       padding-right: 20px;
+       padding-left: 20px;
+    
+    }
+    
+    .profile div {
+       margin-top: 150px;
+    }
+    
+    .portfolio {
+       /* margin-top: 100px; */
+        
+        width: 100%;
+        height: 150px;
+        /* border-radius: 50%; */
+        margin-left: 0;
+        background-image: url("portfolio3.JPG");
+        background-size: cover;
+    }
+    
+    .intro-text {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* .intro-text:first-child { */
+        /* width: 100px; */
+    /* } */
+    
+    .intro {
+        height: 250px;
+        /* margin: 100px 10px; */
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 0.06em;
+        line-height: 30px;
+        text-indent: 1.0em; 
+        -ms-writing-mode: inherit;
+        writing-mode: inherit;
+        /* text-orientation: upright; */
+        /* text-align: start; */
+    }
+}
+
 /* works section */
 
 .main2 {
+    width: 100%;
     background-image: url("woods.png");
     background-size: cover;
     /* background-attachment: fixed; */
@@ -357,6 +534,85 @@ header div {
     margin-top: 400px;
     cursor: pointer;
 }
+
+
+
+@media screen and (max-width: 540px) {
+    .main2 {
+        height: 500px;
+        width: 100%;
+        background-image: url("woods.png");
+        background-size: cover;
+        /* background-attachment: fixed; */
+       
+    }
+    
+    .artwork {
+        background: rgba(255,255,255,0.6);
+        height: 100%;
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+    
+    .artwork h1 {
+        /* margin-right: 100px; */
+        width: 40px;
+        height: 500px;
+        -ms-writing-mode: lr-tb;
+        writing-mode: sideways-lr;
+        text-align: center;
+        font-size: 300%;
+        padding-top: 7px;
+        /* margin: auto 0;  */
+    }
+    
+    
+    
+    .square {
+        background-size: cover;
+        margin-top: 50px;
+        /* display: inline; */
+        /* width: 50%; */
+        width: 100px;
+        height: 100px;
+    }
+    
+    .kitties {
+        background-image: url("kitties.png");
+        /* width: 60%; */
+        /* height: 480px; */
+        /* margin-top: 200px; */
+        cursor: pointer;
+    }
+    
+    .animalF {
+        background-image: url("animalF.png");
+        /* width: 60%; */
+        /* height: 350px; */
+        /* margin-top: 550px; */
+        cursor: pointer;
+    
+    }
+    
+    .stool {
+        background-image: url("stool.png");
+        /* width: 60%; */
+        /* height: 300px; */
+        /* margin-top: 300px; */
+        cursor: pointer;
+    }
+    
+    .books {
+        background-image: url("bookman.png");
+        /* width: 60%; */
+        /* height: 250px; */
+        /* margin-top: 400px; */
+        cursor: pointer;
+    }
+} 
 
 
 
@@ -429,6 +685,8 @@ header div {
 }
 
 .rogoku2 iframe {
+    width: 560px;
+    height: 315px;
     margin: 80px;
 }
 
@@ -437,6 +695,88 @@ header div {
     line-height: 110px;
     text-align: start;
 }
+
+
+@media screen and (max-width: 540px) {
+    .main2-3 {
+        height: 1500px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .main23box { 
+        margin: 0 auto;
+        width: 90%;
+        height: 700px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    
+    .rogoku1 {
+        /* background: gray; */
+        width: 100%;
+        height: 800px;
+        margin: auto 0;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .moji {
+       margin: 0 auto;
+       width: 100%;
+       height: 50%;
+      
+       font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.12em;
+        line-height: 30px;
+        text-indent: 1.0em; 
+       -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        text-align: start;
+        font-size: large;
+
+    }
+    
+    .tanko {
+       margin: 85px auto 0 auto;
+       background-image: url("bag.JPG");
+       background-size: cover;
+       width: 300px;
+       height: 300px;
+       border-radius: 50%;
+    }
+    
+    .rogoku2 {
+       /* background: blue; */
+       width: 100%;
+       height: 700px;
+       margin: 0 auto;
+       
+       display: flex;
+       flex-direction: column-reverse;
+       justify-content: space-around;
+    }
+    
+    .rogoku2 iframe {
+        width: 320px;
+        height: 180px;
+        margin: 80px;
+    }
+    
+    .rogoku2 h2 {
+        font-size: 40px;
+        line-height: 50px;
+        text-align: center;
+    }   
+}
+
 
 /* SUZURI */
 .main3 {
@@ -487,6 +827,55 @@ header div {
     text-orientation: upright;
     text-align: start;
     font-size: large;
+}
+
+
+@media screen and (max-width: 540px) {
+    .main3 {
+        height: 1400px;
+        background: rgb(190, 148, 69);
+        writing-mode: inherit;
+        text-align: end;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .main3 h1 {
+        font-size: 40px;
+        line-height: 80px; 
+       
+    }
+    
+    .main3 h2 {
+        font-size: 100px;
+        margin-top: 10px;
+    }
+    
+    .tora {
+        width: 320px;
+        height: 400px;
+        margin: 100px auto;
+        background-image: url("card.JPG");
+        background-size: cover;
+    }
+    
+    .torabun {
+        margin: 0 auto;
+        padding-top: 0;
+        height: 300px;
+    
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        line-height: 30px;
+        text-indent: 1.0em; 
+       -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        text-align: start;
+        font-size: large;
+    }
 }
 
 

@@ -69,13 +69,13 @@ $(function() {
     $('.drawer_open').click(function() {
         
         $('.nav_content').slideDown('slow');
-        $('.drawer_open').fadeOut('slow');
+        // $('.drawer_open').fadeOut('slow');
     });
 
     // メニューのクリック
     $('.nav_content').click(function() {
         $('.nav_content').fadeOut();
-        $('.drawer_open').fadeIn();
+        // $('.drawer_open').fadeIn();
     });
 
     // メニューがスクロールで消える----------------------------------------------------------
