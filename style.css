@@ -25,7 +25,7 @@ header div {
     justify-content: center;
 }
 
-.headlogo .headlogo2 {
+.headlogo, .headlogo2 {
     margin-left: 40px;
     font-size: 50px;
     font-weight: bold;
@@ -380,7 +380,6 @@ header div {
    display: flex;
    flex-direction: row-reverse;
    justify-content: center;
-
 }
 
 .profile div {
@@ -393,6 +392,9 @@ header div {
     margin-left: 100px;
     background-image: url("portfolio.JPG");
     background-size: cover;
+
+
+    display: none;
 }
 
 .intro-text {
@@ -413,6 +415,9 @@ header div {
     writing-mode: vertical-rl;
     text-orientation: upright;
     text-align: start;
+
+
+    display: none;
 }
 
 
@@ -470,6 +475,8 @@ header div {
     background-size: cover;
     /* background-attachment: fixed; */
     height: 1000px;
+
+    display: none;
 }
 
 .artwork {
@@ -504,6 +511,9 @@ header div {
     height: 480px;
     margin-top: 200px;
     cursor: pointer;
+
+
+    display: none;
 }
 
 .animalF {
@@ -513,6 +523,8 @@ header div {
     margin-top: 550px;
     cursor: pointer;
 
+
+    display: none;
 }
 
 .stool {
@@ -521,6 +533,9 @@ header div {
     height: 300px;
     margin-top: 300px;
     cursor: pointer;
+
+
+    display: none;
 }
 
 .books {
@@ -529,6 +544,9 @@ header div {
     height: 250px;
     margin-top: 400px;
     cursor: pointer;
+
+
+    display: none;
 }
 
 
@@ -657,6 +675,10 @@ header div {
     text-orientation: upright;
     text-align: start;
     font-size: large;
+
+
+    display: none;
+
 }
 
 .tanko {
@@ -665,6 +687,10 @@ header div {
    background-size: cover;
    width: 400px;
    height: 800px;
+
+
+   display: none;
+
 }
 
 .rogoku2 {
@@ -682,12 +708,20 @@ header div {
     width: 560px;
     height: 315px;
     margin: 80px;
+
+
+    display: none;
+
 }
 
 .rogoku2 h2 {
     font-size: 500%;
     line-height: 110px;
     text-align: start;
+
+
+    display: none;
+
 }
 
 

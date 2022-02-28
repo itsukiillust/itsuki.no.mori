@@ -30,6 +30,18 @@ $(function() {
     });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
     
 
     //イラストがクリックされた時-------------------------------------------------------------
@@ -94,34 +106,95 @@ $(function() {
     });
 
     
-    // 画面がスクロールされたら
+    // profileスクロールで表示
     $(window).scroll(function() {
         // 画面のスクロールされた壁を取得
         let scrollTop = $(document).scrollTop();
-
         // section2のスクロールしたときの表示位置の取得
-        let section2Top = $('.section2').offset().top;
-
+        let greetingTop = $('.greeting').offset().top;
         //　矢印の表示・非表示を切り替える
         // スクロール量がsection2Topを超えたら、矢印を表示
-        if (scrollTop >= section2Top) {
+        if (scrollTop >= greetingTop) {
             // arrowの表示
-            $('.arrow').fadeIn();
-
-            // Hello Scrollの表示
-            $('.hello-scroll').fadeIn('slow');
-
+            $('.portfolio').fadeIn(2000);
+            $('.intro').fadeIn(2500);
         } else {
             // スクロール量がsection2Topを超えていないとき
-            $('.arrow').fadeOut();    
+            $('.portfolio').fadeOut(1000);
+            $('.intro').fadeOut(1000);    
             
-            // Hello Scrollが800を超えていないとき
-            $('.hello-scroll').fadeOut('slow');
         };
+
+
+    // worksスクロールで表示
+        let introTop = $('.intro-text').offset().top;
+
+        if (scrollTop >= introTop) {
+            $('.main2').fadeIn(1000);
+            $('.kitties').fadeIn(1500);
+            $('.animalF').fadeIn(2000);
+            $('.stool').fadeIn(2500);
+            $('.books').fadeIn(3000);
+
+        } else {
+            $('.main2').fadeOut();
+            $('.kitties').fadeOut();
+            $('.animalF').fadeOut();
+            $('.stool').fadeOut();
+            $('.books').fadeOut();
+        };
+
+
+    //movieスクロールで表示
+        let bookTop = $('.books').offset().top;
+
+        if (scrollTop >= bookTop) {
+            $('.moji').fadeIn('slow');
+            $('.tanko').fadeIn('slow');
+            $('.youtube').fadeIn('slow');
+            $('.movie_h2').fadeIn('slow');
+
+        } else {
+            $('.moji').fadeOut();
+            $('.tanko').fadeOut();
+            $('.youtube').fadeOut();
+            $('.movie_h2').fadeOut();
+
+        }
 
     });
 
-    
+
+//////worksスクロールで表示 (errorになるの何故？)///////////////////
+
+
+    // $(window).scroll(function(){
+
+    //     let scrollTop = $(docment).scrollTop();
+    //     let introTop = $('.intro-text').offset().top;
+
+    //     if (scrollTop >= introTop) {
+    //         $('.kitties').fadeIn(1500);
+    //         $('.stool').fadeIn(2000);
+    //         $('.books').fadeIn(2500);
+    //         $('.animalF').fadeIn(3000);
+
+    //     } else {
+    //         $('.kitties').fadeOut(1000);
+    //         $('.stool').fadeOut(1000);
+    //         $('.books').fadeOut(1000);
+    //         $('.animalF').fadeOut(1000);
+    //     };
+    // });
+
+
+
+
+
+
+
+
+
 
     $(window).scroll(function() {
         let scrollTop = $(document).scrollTop();
