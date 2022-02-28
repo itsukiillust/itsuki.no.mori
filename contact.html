@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header id="head">
         <div class="header-left">
             <a href="index.html#head", class="headlogo">イツキノ・モリ</a>
         </div>
@@ -19,7 +19,7 @@
                 <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
                 <input id="drawer_input" class="drawer_hidden" type="checkbox">
                 <!-- ハンバーガーアイコン -->
-                <label for="drawer_input" class="drawer_open"><span></span></label>
+                <button for="drawer_input" id="hambur" class="drawer_open"><span></span></button>
                 <!-- メニュー -->
                 <nav class="nav_content">
                   <ul class="nav_list">
@@ -36,7 +36,6 @@
 
         </div>
     </header>
-
       <!-- contact form -->
       <main class="main4" id="submit">
         <h1>お問い合わせ</h1>
@@ -52,14 +51,17 @@
                 </div>
                 <div class="input">
                     <p>本文:</p>
-                    <input class="message" type="text" name="message">
+                    <textarea class="message" type="text" name="message" rows="7"></textarea>
                 </div>           
             </div>
             <input class="submit" type="submit" value="送信">
-        </form>
+        </form>  
     </main>
-    <footer>
+     <footer>
         <div>© Itsuki Hirata, 2022</div>
-   </footer>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
