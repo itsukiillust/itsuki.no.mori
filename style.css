@@ -1,7 +1,7 @@
 body {
     width: 100%;
     text-align: center;
-    font-family: "游ゴシック体", "YuGothic", "Arial";
+    font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "Helvetica", Meiryo, sans-serif;
 }
 
 header {
@@ -163,6 +163,7 @@ header div {
     .headlogo {
         margin-left: 10px;
         font-size: 15px;
+        display: none;
     }
   
    .drawer_open {
@@ -289,6 +290,10 @@ header div {
 
 }
 
+.gre_hide {
+    display: none;
+}
+
 @keyframes maintop{
     0% {
         opacity: 0;
@@ -316,34 +321,31 @@ header div {
 @media screen and (max-width: 540px) {
     .main1 {
         height: 400px;
+        background: white;
+        background-image: url("pinkdog.png");
+        background-size: cover;
+        
+    }
+
+    .main1 div {
+        height: 150px;
+        padding-top: 0;
         display: flex;
         flex-direction: row;
-        justify-content: start;
+        justify-content: center;
     }
-    
-    .main1 div {
-        width: 320px;
-        height: 150px;
-        padding-top: 220px;
-        padding-left: 20px;
-    }
-    
+
     .greeting {
-        font-size: 15px;
-        font-weight: bold;
-        letter-spacing: 0.2em;
-        line-height: 40px;
-        text-indent: 0em; 
-        writing-mode: inherit;
-        /* text-align: center; */
-
-    }   
-
-    .gre1 {
-       display: none;
+        display: none;
     }
 
-    
+    .gre_hide {
+        top: 0;
+        display: inline;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
 }
 
 @media screen and (max-width: 780px) {
@@ -412,48 +414,30 @@ header div {
 @media screen and (max-width: 540px) {
     .main2-1 { 
         width: 100%;
-        height: 1200px;
+        height: 600px;
     }
     
     .profile {
-       display: flex;
-       flex-direction: column;
-       justify-content: space-around;
        margin: 0 auto;
        padding-right: 20px;
        padding-left: 20px;
-    
-    }
-    
-    .profile div {
-       margin-top: 150px;
+       margin-top: 100px;
+       margin-bottom: 100px;;
     }
     
     .portfolio {
-       /* margin-top: 100px; */
-        
-        width: 100%;
-        height: 150px;
-        /* border-radius: 50%; */
-        margin-left: 0;
-        background-image: url("portfolio3.JPG");
-        background-size: cover;
+        display: none;
     }
     
     .intro-text {
-        margin-top: 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
     }
 
-    /* .intro-text:first-child { */
-        /* width: 100px; */
-    /* } */
-    
+   
     .intro {
-        height: 250px;
-        /* margin: 100px 10px; */
+        height: 300px;
         font-size: 15px;
         font-weight: bold;
         letter-spacing: 0.06em;
@@ -461,9 +445,15 @@ header div {
         text-indent: 1.0em; 
         -ms-writing-mode: inherit;
         writing-mode: inherit;
-        /* text-orientation: upright; */
-        /* text-align: start; */
     }
+    .intro-text:first-child {
+        height: 240px;
+    }
+
+    .intro-text:last-child {
+        height: 120px;
+    }
+    
 }
 
 /* works section */
@@ -543,7 +533,6 @@ header div {
         width: 100%;
         background-image: url("woods.png");
         background-size: cover;
-        /* background-attachment: fixed; */
        
     }
     
@@ -558,14 +547,14 @@ header div {
     }
     
     .artwork h1 {
-        /* margin-right: 100px; */
-        width: 40px;
-        height: 500px;
-        -ms-writing-mode: lr-tb;
-        writing-mode: sideways-lr;
+        width: 100%;
+        height: 40px;
+        -ms-writing-mode: inherit;
+        writing-mode: inherit;
         text-align: center;
-        font-size: 300%;
-        padding-top: 7px;
+        font-size: 40px;
+        padding-top: 30px;
+        /* padding-top: 7px; */
         /* margin: auto 0;  */
     }
     
@@ -573,11 +562,10 @@ header div {
     
     .square {
         background-size: cover;
-        margin-top: 50px;
-        /* display: inline; */
-        /* width: 50%; */
-        width: 100px;
-        height: 100px;
+        margin-top: 30px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
     }
     
     .kitties {
@@ -716,10 +704,8 @@ header div {
     }
     
     .rogoku1 {
-        /* background: gray; */
         width: 100%;
         height: 800px;
-        margin: auto 0;
     
         display: flex;
         flex-direction: column;
@@ -729,18 +715,27 @@ header div {
     .moji {
        margin: 0 auto;
        width: 100%;
-       height: 50%;
+       height: 450px;
       
-       font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
         letter-spacing: 0.12em;
-        line-height: 30px;
+        line-height: 27px;
         text-indent: 1.0em; 
        -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
         text-orientation: upright;
         text-align: start;
-        font-size: large;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .moji p {
+        margin: 0 auto;
+        width: 270px;
+        padding: 20px;
 
     }
     
@@ -757,7 +752,7 @@ header div {
        /* background: blue; */
        width: 100%;
        height: 700px;
-       margin: 0 auto;
+       /* margin: 0 auto; */
        
        display: flex;
        flex-direction: column-reverse;
@@ -765,13 +760,13 @@ header div {
     }
     
     .rogoku2 iframe {
-        width: 320px;
-        height: 180px;
-        margin: 80px;
+        width: 280px;
+        height: 160px;
+        margin: 85px auto;
     }
     
     .rogoku2 h2 {
-        font-size: 40px;
+        font-size: 25px;
         line-height: 50px;
         text-align: center;
     }   
@@ -832,49 +827,59 @@ header div {
 
 @media screen and (max-width: 540px) {
     .main3 {
-        height: 1400px;
+        height: 1300px;
         background: rgb(190, 148, 69);
         writing-mode: inherit;
-        text-align: end;
+        text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
     }
     
     .main3 h1 {
-        font-size: 40px;
-        line-height: 80px; 
+        font-size: 25px;
+        line-height: 50px; 
        
     }
     
     .main3 h2 {
-        font-size: 100px;
-        margin-top: 10px;
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+
+        font-size: 50px;
+        line-height: 250px;
+        text-orientation: upright;
+        /* text-indent: 0.1em;  */
+
+
+        margin-top: 0;
+        background:rgb(179, 110, 110);
+        border-radius: 50%;
     }
     
     .tora {
         width: 320px;
         height: 400px;
-        margin: 100px auto;
+        margin: 0 auto;
         background-image: url("card.JPG");
         background-size: cover;
     }
     
     .torabun {
         margin: 0 auto;
-        padding-top: 0;
-        height: 300px;
+        padding: 0 20px;
+        height: 470px;
     
-        font-size: 40px;
+        font-size: 15px;
         font-weight: bold;
         letter-spacing: 0.1em;
         line-height: 30px;
         text-indent: 1.0em; 
-       -ms-writing-mode: tb-rl;
-        writing-mode: vertical-rl;
+       -ms-writing-mode: inherit;
+        writing-mode: inherit;
         text-orientation: upright;
         text-align: start;
-        font-size: large;
     }
 }
 

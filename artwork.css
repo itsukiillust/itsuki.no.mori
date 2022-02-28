@@ -53,4 +53,37 @@
 }
 
 
-
+@media screen and (max-width: 540px) {
+    .kitties1 p, .animalF1 p, .stool1 p, .books1 p {
+        font-size: 20px;
+    }
+    
+    .kitties1 img {
+        width: 70%;
+        padding-top: 150px;
+        margin: 0 auto;
+        background-size: cover;
+    }
+    
+    .animalF1 img {
+        width: 50%;
+        padding-top: 130px;
+        margin: 0 auto;
+        background-size: cover;
+    
+    }
+    
+    .stool1 img {
+        width: 70%;
+        padding-top: 130px;
+        margin: 0 auto;
+        background-size: cover;
+    }
+    
+    .books1 img {
+        width: 70%;
+        padding-top: 150px;
+        margin: 0 auto;
+        background-size: cover;
+    }
+}
