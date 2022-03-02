@@ -482,7 +482,7 @@ header div {
     /* background-attachment: fixed; */
     height: 1000px;
 
-    display: none;
+    /* display: none; */
 }
 
 .artwork {
@@ -776,13 +776,17 @@ header div {
         display: flex;
         flex-direction: row;
         justify-content: center;
+
+
+        display: none;
     }
 
     .moji p {
         margin: 0 auto;
         width: 270px;
         padding: 20px;
-
+        
+        /* display: none; */
     }
     
     .tanko {
@@ -792,6 +796,8 @@ header div {
        width: 300px;
        height: 300px;
        border-radius: 50%;
+
+       display: none;
     }
     
     .rogoku2 {
@@ -809,6 +815,8 @@ header div {
         width: 280px;
         height: 160px;
         margin: 0 auto;
+
+        display: none;
     }
     
     .rogoku2 h2 {
@@ -816,6 +824,8 @@ header div {
         line-height: 50px;
         text-align: center;
         padding-top: 50px;
+
+        display: none;
     }   
 }
 
@@ -833,18 +843,19 @@ header div {
     /* font-size: large; */
 }
 
-.main3 h1 {
+.main3_h1 {
     font-size: 500%;
     line-height: 200px; 
     margin-top: 50px;
    
+    display: none;
 }
 
-.main3 h2 {
+.main3_h2 {
     font-size: 750%;
     margin-top: 150px;
 
-    /* line-height: px; */
+    display: none;
 }
 
 .tora {
@@ -853,6 +864,8 @@ header div {
     margin-right: 200px;
     background-image: url("card.JPG");
     background-size: cover;
+
+    display: none;
 }
 
 .torabun {
@@ -869,6 +882,20 @@ header div {
     text-orientation: upright;
     text-align: start;
     font-size: large;
+
+    /* display: none; */
+}
+
+.torabun a {
+    color: white;
+
+    display: none;
+}
+
+.torabun a:hover {
+    color: rgb(63, 63, 63);
+
+    display: none;
 }
 
 

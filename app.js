@@ -106,11 +106,11 @@ $(function() {
     });
 
     
-    // profileスクロールで表示
+   
     $(window).scroll(function() {
         // 画面のスクロールされた壁を取得
         let scrollTop = $(document).scrollTop();
-        // section2のスクロールしたときの表示位置の取得
+         // profileスクロールで表示
         let greetingTop = $('.greeting').offset().top;
         //　矢印の表示・非表示を切り替える
         // スクロール量がsection2Topを超えたら、矢印を表示
@@ -127,26 +127,37 @@ $(function() {
 
 
     // worksスクロールで表示
-        let introTop = $('.intro-text').offset().top;
+        let introTop = $('.profile').offset().top;
 
         if (scrollTop >= introTop) {
-            $('.main2').fadeIn(1000);
+            // $('.main2').fadeIn(1000);
             $('.kitties').fadeIn(1500);
             $('.animalF').fadeIn(2000);
             $('.stool').fadeIn(2500);
             $('.books').fadeIn(3000);
 
         } else {
-            $('.main2').fadeOut();
+            // $('.main2').fadeOut();
             $('.kitties').fadeOut();
             $('.animalF').fadeOut();
             $('.stool').fadeOut();
             $('.books').fadeOut();
         };
 
+    });
 
+
+
+
+    $(window).scroll(function() {
+        // 画面のスクロールされた壁を取得
+        let scrollTop = $(document).scrollTop();
     //movieスクロールで表示
         let bookTop = $('.books').offset().top;
+        let main1Top = $('.main1').offset().top;
+
+        // 
+        
 
         if (scrollTop >= bookTop) {
             $('.moji').fadeIn('slow');
@@ -160,8 +171,30 @@ $(function() {
             $('.youtube').fadeOut();
             $('.movie_h2').fadeOut();
 
-        }
+        };
 
+    });
+
+    //トラの画面をスクロールで表示
+    $(window).scroll(function() {
+        let scrollTop = $(document).scrollTop();
+        let main3Top = $('.main3').offset().top;
+        let main3Enter = main3Top - 800;
+
+        if (scrollTop >= main3Enter) {
+            $('.main3_h1').fadeIn('slow');
+            $('.main3_h2').fadeIn('slow');
+            $('.tora').fadeIn('slow');
+            $('.torabun_p').fadeIn('slow');
+            $('.torabun_a').fadeIn('slow');
+        } else {
+            $('.main3_h1').fadeOut();
+            $('.main3_h2').fadeOut();
+            $('.tora').fadeOut();
+            $('.torabun_p').fadeOut();
+            $('.torabun_a').fadeOut();
+        
+        };
     });
 
 
