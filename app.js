@@ -53,20 +53,20 @@ $(function() {
         $('.kitties1').fadeOut('slow');
     });
     // 
-    $('.animalF').click(function() {
-        $('.animalF1').fadeIn('slow');
+    $('.tora_series').click(function() {
+        $('.tora_series1').fadeIn('slow');
     });
 
-    $('.animalF1').click(function() {
-        $('.animalF1').fadeOut('slow');
+    $('.tora_series1').click(function() {
+        $('.tora_series1').fadeOut('slow');
     });
     // 
-    $('.stool').click(function() {
-        $('.stool1').fadeIn('slow');
+    $('.muji').click(function() {
+        $('.muji1').fadeIn('slow');
     });
 
-    $('.stool1').click(function() {
-        $('.stool1').fadeOut('slow');
+    $('.muji1').click(function() {
+        $('.muji1').fadeOut('slow');
     });
     // 
     $('.books').click(function() {
@@ -132,15 +132,15 @@ $(function() {
         if (scrollTop >= introTop) {
             // $('.main2').fadeIn(1000);
             $('.kitties').fadeIn(1500);
-            $('.animalF').fadeIn(2000);
-            $('.stool').fadeIn(2500);
+            $('.tora_series').fadeIn(2000);
+            $('.muji').fadeIn(2500);
             $('.books').fadeIn(3000);
 
         } else {
             // $('.main2').fadeOut();
             $('.kitties').fadeOut();
-            $('.animalF').fadeOut();
-            $('.stool').fadeOut();
+            $('.tora_series').fadeOut();
+            $('.muji').fadeOut();
             $('.books').fadeOut();
         };
 

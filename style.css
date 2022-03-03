@@ -559,8 +559,8 @@ header div {
     display: none;
 }
 
-.animalF {
-    background-image: url("animalF.png");
+.tora_series {
+    background-image: url("jan.jpg");
     width: 350px;
     height: 350px;
     margin-top: 550px;
@@ -570,8 +570,8 @@ header div {
     display: none;
 }
 
-.stool {
-    background-image: url("stool.png");
+.muji {
+    background-image: url("minichua.png");
     width: 400px;
     height: 300px;
     margin-top: 300px;
@@ -626,6 +626,7 @@ header div {
         margin-top: 30px;
         width: 150px;
         height: 150px;
+        border:rgb(75, 47, 14) 1px solid; 
         border-radius: 3%;
     }
     
@@ -634,14 +635,14 @@ header div {
         cursor: pointer;
     }
     
-    .animalF {
-        background-image: url("animalF.png");
+    .tora_series {
+        background-image: url("jan.jpg");
         cursor: pointer;
     
     }
     
-    .stool {
-        background-image: url("stool.png");
+    .muji {
+        background-image: url("minichua.png");
         cursor: pointer;
     }
     
